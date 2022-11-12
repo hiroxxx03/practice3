@@ -1,0 +1,14 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header{
+  padding: 40px 0 0 50px;
+}
+
+.header-logo{
+  display: block;
+  width: 100px;
+}
