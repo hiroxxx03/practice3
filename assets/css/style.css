@@ -340,3 +340,43 @@ header{
 
 
 /* footer */
+
+footer{
+  width: 100%;
+  padding-top: 60px;
+  background-color: #E8E8E8;
+}
+
+.footer-content-area{
+  width: 70%;
+  letter-spacing: 2px;
+  display: flex;
+  margin: 0 auto 60px;
+}
+
+.footer-content{
+  width: 25%;
+}
+
+.footer-title{
+  font-size: 16px;
+}
+
+.footer-list{
+  padding: 10px 0 0 10px;
+}
+
+.footer-list li{
+  margin-bottom: 5px;
+}
+
+.footer-list li a{
+  font-size: 14px;
+}
+
+
+.copy{
+  font-size: 10px;
+  text-align: center;
+  padding-bottom: 20px;
+}
