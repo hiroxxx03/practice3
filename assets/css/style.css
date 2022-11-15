@@ -241,3 +241,102 @@ header{
   line-height: 1.7;
 }
 
+
+
+/* school-overview-container */
+
+.school-overview-container{
+  width: 100%;
+  padding: 60px 0;
+  margin-bottom: 120px;
+  background-image: url("../img/bg.gif");
+  background-repeat: repeat;
+}
+
+.school-container{
+  width: 860px;
+  margin: 0 auto;
+}
+
+.school-item-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4%;
+}
+
+.school-item-list .school-item:nth-of-type(-n+2){
+  margin-bottom: 32px;
+}
+
+.school-item{
+  width: 48%;
+  padding: 60px;
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.school-item-title-ja{
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.school-item-title-en{
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.school-item-text{
+  letter-spacing: 2px;
+  line-height: 1.7;
+}
+
+
+
+/* recommend-container */
+
+.recommend-container{
+  width: 100%;
+  margin-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+.recommend-title{
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.recommend-text{
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.recommend-btn{
+  font-size: 28px;
+  font-weight: bold;
+  width: 90%;
+  max-width: 860px;
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  background-color: #FF2A2A;
+  border: 2px solid #FF2A2A;
+  border-radius: 40px;
+  transition: .3s;
+}
+
+.recommend-btn:hover{
+  color: #FF2A2A;
+  background-color: #fff;
+}
+
+
+
+/* footer */
