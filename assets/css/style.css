@@ -19,12 +19,12 @@ header{
   padding: 40px 0 0 50px;
 }
 
-.header-logo{
+.header-logo-r{
   display: block;
   width: 100px;
 }
 
-.header-logo img{
+.header-logo-r img{
   width: 100px;
 }
 
@@ -33,6 +33,130 @@ header{
     padding: 25px 0 0 25px;
   }
 }
+
+
+
+/*   hamburger-btn   */
+#hamburger-btn {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  z-index : 12;
+  right : 0px;
+  top   : 0px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #FF2A2A;
+}
+#hamburger-btn span {
+  display : block;
+  position: absolute;
+  width   : 50px;
+  height  : 2px;
+  left    : 25px;
+  background : #fff;
+  transition: .5s;
+}
+#hamburger-btn span:nth-child(1) {
+  top: 32px;
+}
+#hamburger-btn span:nth-child(2) {
+  top: 49px;
+}
+#hamburger-btn span:nth-child(3) {
+  top: 66px;
+}
+
+/* ナビ開いてる時のボタン */
+#hamburger-btn.active span:nth-child(1) {
+  top : 50px;
+  left: 25px;
+  background :#fff;
+  transform: rotate(-45deg);
+}
+
+#hamburger-btn.active span:nth-child(2),
+#hamburger-btn.active span:nth-child(3) {
+  top: 50px;
+  background :#fff;
+  transform: rotate(45deg);
+}
+
+
+
+/*   menu-container ハンバーガーメニューの内容   */
+#menu-container{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  opacity: 0;
+  transition: .5s;
+}
+
+#menu-container.active{
+  background-color: #FF2A2A;
+  position: fixed;
+  top: 0;
+  opacity: 1;
+  z-index: 11;
+}
+
+#header-menu{
+  width: 100%;
+}
+
+.header-logo-w{
+  margin: 40px 0 0 50px;
+  display: block;
+  width: 100px;
+}
+
+#header-menu ul{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header-menu ul li{
+  margin-bottom: 20px;
+}
+
+#header-menu ul li a{
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#menu-btn-item{
+  /* width: 250px; */
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #fff;
+  position: relative;
+  box-shadow:
+    4px 4px 0px -0.1px #FF2A2A,
+    5px 5px #fff;
+  transition: .5s;
+}
+
+#menu-btn{
+  text-align: center;
+  width: 250px;
+  padding: 15px 0;
+  transition: .5s;
+}
+
+#menu-btn-item:hover,
+#menu-btn:hover{
+  color: #FF2A2A;
+  background-color: #fff;
+}
+
+
 /* container   and   content-title*/
 .guidance-container,
 .reason-container,
@@ -93,6 +217,10 @@ header{
   width: 450px;
   margin-left: 10%;
   z-index: 10;
+}
+
+.guidance-text.active{
+  z-index: 1;
 }
 
 .guidance-text p{
