@@ -261,10 +261,14 @@ header{
   height: 720px;
   top: 0;
   right: 0;
-  background-image: url("../img/mainvisual1.jpg");
+  background-image:
+    url("../img/mainvisual1.jpg"),
+    url("../img/mainvisual2.jpg"),
+    url("../img/mainvisual3.jpg");
   background-position: center;
   background-size: cover;
   box-shadow: inset 0px 0px 20px 20px #fff;
+  transition: 2s;
 }
 
 @media screen and (max-width:900px){
