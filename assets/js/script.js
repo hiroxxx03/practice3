@@ -46,3 +46,37 @@ function slideshow1(){
 }
 
 setInterval(slideshow1, 5000);
+
+
+
+//          reason-content
+
+window.addEventListener('scroll', function(){
+  const scroll = window.pageYOffset;
+
+
+  const reasonL = document.querySelector('.reason-content-box .reason-content:first-of-type');
+
+  const clientRectL = reasonL.getBoundingClientRect().top;
+
+  const reasonLY = scroll + clientRectL;
+
+
+  const reasonR = document.querySelector('.reason-content-box .reason-content:last-of-type');
+
+  const clientRectR = reasonR.getBoundingClientRect().top;
+
+  const reasonRY = scroll + clientRectR;
+
+
+  let wh = window.innerHeight;
+  wh = wh / 1.5;
+
+  if(scroll + wh > reasonLY){
+    reasonL.classList.add('scroll-up');
+  }
+
+  if(scroll + wh > reasonRY){
+    reasonR.classList.add('scroll-up');
+  }
+})
