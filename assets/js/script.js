@@ -49,7 +49,7 @@ setInterval(slideshow1, 5000);
 
 
 
-//          reason-content
+//   reason-content and   comment-content
 
 window.addEventListener('scroll', function(){
   const scroll = window.pageYOffset;
@@ -79,4 +79,49 @@ window.addEventListener('scroll', function(){
   if(scroll + wh > reasonRY){
     reasonR.classList.add('scroll-up');
   }
+
+
+
+//   comment-content
+
+  comments.forEach(function(element){
+
+    const clientRect = element.getBoundingClientRect().top;
+
+    const commentY = scroll + clientRect;
+
+    let wh = window.innerHeight;
+    wh = wh / 1.5;
+
+    if(scroll + wh > commentY){
+      element.classList.add('scroll-up-c');
+    }
+  })
 })
+
+let comments = new Array();
+
+for(i=1;i<=3;i++){
+  comments[i - 1] = document.getElementById('comment'+i);
+}
+
+console.log(comments);
+
+
+
+//   school-overview-container
+
+document.querySelector('.school-overview-container').animate(
+  [
+    { backgroundPosition: '0 0' },
+    { backgroundPosition: '-124.1% 294.1%' }
+  ],
+  {
+    duration: 10000,
+    iterations: Infinity
+  }
+)
+
+// document.querySelector('.school-overview-container').style.backgroundPosition='0 0';
+
+// document.querySelector('.school-overview-container').style.backgroundPosition='-124.1% 294.1%';

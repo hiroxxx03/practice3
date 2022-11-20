@@ -377,13 +377,18 @@ header{
 .comment-content-box{
   width: 860px;
   margin: 0 auto;
+  background-color: #fff;
 }
 
 .comment-content{
   display: flex;
   justify-content: left;
+  opacity: 0;
+  transition: .3s ease-in-out;
 }
-
+.comment-content.scroll-up-c{
+  opacity: 1;
+}
 .comment-content-box .comment-content:nth-of-type(-n+2){
   margin-bottom: 60px;
 }
